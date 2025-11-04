@@ -1,5 +1,7 @@
 # AtividadeAPI
 
-Gabriel - especialista em química\n
-Pedrão - especialista em agiotagem\n
+Gabriel - especialista em química
+
+Pedrão - especialista em agiotagem
+
 Lucas - especialista em C#
