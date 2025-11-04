@@ -15,25 +15,23 @@ import org.springframework.web.bind.annotation.RestController;
 import com.senai.infob.atividade_api.Models.Cadastro;
 import com.senai.infob.atividade_api.Services.CadastroService;
 
-
-
 @RestController
 @RequestMapping("/cadastro")
 public class CadastroController {
-    
+
     @Autowired
-    public CadastroService cadastroService ;
+    public CadastroService cadastroService;
 
     @GetMapping("/count")
     public Long count() {
         return cadastroService.count();
     }
-    
+
     @PostMapping("/salvar")
     public Cadastro salvar(@RequestBody Cadastro cadastro) { 
         return cadastroService.salvar(cadastro);
     }
-    
+
     @DeleteMapping("/deletar/{id}")
     public String deletar(@PathVariable Integer id){
         boolean deletou = cadastroService.deletar(id);
