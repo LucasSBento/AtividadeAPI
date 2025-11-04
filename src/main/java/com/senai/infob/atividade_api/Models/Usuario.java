@@ -8,11 +8,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
 
 @Entity
 @Table(name="cadastro")
-public class Cadastro {
+public class Usuario {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,21 +33,16 @@ public class Cadastro {
     @Column(name="cpf")
     private String cpf;
 
-    @Transient
-    private String confirmarSenha;
-
-    public Cadastro() {
+    public Usuario() {
     }
 
-    public Cadastro(Integer id, String nomeCompleto, String email, String senha, LocalDate dataNascimento, String cpf,
-            String confirmarSenha) {
+    public Usuario(Integer id, String nomeCompleto, String email, String senha, LocalDate dataNascimento, String cpf) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
-        this.confirmarSenha = confirmarSenha;
     }
 
     public Integer getId() {
@@ -97,14 +91,6 @@ public class Cadastro {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public String getConfirmarSenha() {
-        return confirmarSenha;
-    }
-
-    public void setConfirmarSenha(String confirmarSenha) {
-        this.confirmarSenha = confirmarSenha;
     }
 
 }
