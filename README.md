@@ -11,3 +11,6 @@ https://prod.liveshare.vsengsaas.visualstudio.com/join?8B3C3C57CECEFC52BD00681AF
 
 FlutterFlow:
 https://app.flutterflow.io/project/churrascaria-xvp36j
+
+Swagger:
+http://localhost:8080/atividade-api/swagger-ui/index.html#/
