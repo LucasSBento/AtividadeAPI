@@ -1,10 +1,10 @@
 # AtividadeAPI
 
-Gabriel - especialista em química
+Gabriel - aprendiz de desenvolvimento de sistemas
 
-Pedrão - especialista em agiotagem
+Pedrão - aprendiz de desenvolvimento de sistemas
 
-Lucas - especialista em C#
+Lucas - aprendiz de desenvolvimento de sistemas
 
 Live Server:
 https://prod.liveshare.vsengsaas.visualstudio.com/join?8B3C3C57CECEFC52BD00681AF7E2C9AE7B0E
