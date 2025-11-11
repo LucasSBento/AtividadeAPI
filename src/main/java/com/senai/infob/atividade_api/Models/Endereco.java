@@ -1,0 +1,119 @@
+package com.senai.infob.atividade_api.Models;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="endereco")
+public class Endereco {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    private Integer id;
+    
+    @Column(name="logradouro")
+    private String cidade;
+
+    @Column(name="localidade")
+    private String email;
+
+    @Column(name="cep")
+    private int cep;
+
+    @Column(name="numero")
+    private int numero;
+
+    @Column(name="complemento")
+    private String complemento;
+
+    @Column(name="bairro")
+    private String bairro;
+
+    @Column(name="referencia")
+    private String referencia;
+
+    public Endereco() {
+    }
+
+    public Endereco(Integer id, String cidade, String email, int cep, int numero, String complemento, String bairro,
+            String referencia) {
+        this.id = id;
+        this.cidade = cidade;
+        this.email = email;
+        this.cep = cep;
+        this.numero = numero;
+        this.complemento = complemento;
+        this.bairro = bairro;
+        this.referencia = referencia;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getCep() {
+        return cep;
+    }
+
+    public void setCep(int cep) {
+        this.cep = cep;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getReferencia() {
+        return referencia;
+    }
+
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
+    }
+
+}

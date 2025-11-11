@@ -47,15 +47,6 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public Usuario atualizar(Usuario usuario, Integer id) {
-        Usuario e = buscar(id);
-        if (e != null) {
-            usuario.setId(id);
-            return usuarioRepository.save(usuario);
-        }
-        return null;
-    }
-
     public Boolean atualizarBoolean(Usuario usuario, Integer id) {
         if (usuarioRepository.existsById(id)) {
             usuario.setId(id);
