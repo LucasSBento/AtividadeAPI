@@ -1,12 +1,15 @@
 package com.senai.infob.atividade_api.Models;
 
 import java.time.LocalDate;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -33,16 +36,21 @@ public class Usuario {
     @Column(name="cpf")
     private String cpf;
 
+    @OneToMany(mappedBy="usuario", cascade= CascadeType.ALL, orphanRemoval=true)
+    private List<Endereco> enderecos;
+
     public Usuario() {
     }
 
-    public Usuario(Integer id, String nomeCompleto, String email, String senha, LocalDate dataNascimento, String cpf) {
+    public Usuario(Integer id, String nomeCompleto, String email, String senha, LocalDate dataNascimento, String cpf,
+            List<Endereco> enderecos) {
         this.id = id;
         this.nomeCompleto = nomeCompleto;
         this.email = email;
         this.senha = senha;
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
+        this.enderecos = enderecos;
     }
 
     public Integer getId() {
@@ -91,6 +99,14 @@ public class Usuario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
 
 }

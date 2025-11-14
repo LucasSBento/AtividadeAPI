@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -37,11 +39,15 @@ public class Endereco {
     @Column(name="referencia")
     private String referencia;
 
+    @ManyToOne
+    @JoinColumn(name="usuario_id")
+    private Usuario usuario;
+
     public Endereco() {
     }
 
     public Endereco(Integer id, String cidade, String email, int cep, int numero, String complemento, String bairro,
-            String referencia) {
+            String referencia, Usuario usuario) {
         this.id = id;
         this.cidade = cidade;
         this.email = email;
@@ -50,6 +56,7 @@ public class Endereco {
         this.complemento = complemento;
         this.bairro = bairro;
         this.referencia = referencia;
+        this.usuario = usuario;
     }
 
     public Integer getId() {
@@ -115,5 +122,15 @@ public class Endereco {
     public void setReferencia(String referencia) {
         this.referencia = referencia;
     }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    
 
 }
