@@ -22,7 +22,7 @@ public class Endereco {
     private String cidade;
 
     @Column(name="localidade")
-    private String email;
+    private String localidade;
 
     @Column(name="cep")
     private int cep;
@@ -46,11 +46,11 @@ public class Endereco {
     public Endereco() {
     }
 
-    public Endereco(Integer id, String cidade, String email, int cep, int numero, String complemento, String bairro,
+    public Endereco(Integer id, String cidade, String localidade, int cep, int numero, String complemento, String bairro,
             String referencia, Usuario usuario) {
         this.id = id;
         this.cidade = cidade;
-        this.email = email;
+        this.localidade = localidade;
         this.cep = cep;
         this.numero = numero;
         this.complemento = complemento;
@@ -75,12 +75,12 @@ public class Endereco {
         this.cidade = cidade;
     }
 
-    public String getEmail() {
-        return email;
+    public String getlocalidade() {
+        return localidade;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setlocalidade(String localidade) {
+        this.localidade = localidade;
     }
 
     public int getCep() {
